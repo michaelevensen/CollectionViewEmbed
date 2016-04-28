@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,5 @@ class ArticleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -20,7 +20,7 @@
                             <constraint firstAttribute="height" constant="43" id="g7Z-zL-xyc"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
@@ -31,7 +31,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ayd-aO-6et" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="27" id="5jc-hD-3jW"/>
                 <constraint firstAttribute="trailing" secondItem="ayd-aO-6et" secondAttribute="trailing" constant="27" id="KLh-Ga-20w"/>

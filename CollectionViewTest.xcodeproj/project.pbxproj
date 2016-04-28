@@ -17,7 +17,8 @@
 		3511F72E1CD0F6CC00B5D936 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3511F72C1CD0F6CC00B5D936 /* CollectionViewCell.xib */; };
 		35FD19481CD247E80040BB90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD19471CD247E80040BB90 /* TableViewController.swift */; };
 		35FD194A1CD248B40040BB90 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD19491CD248B40040BB90 /* CategoryTableViewCell.swift */; };
-		35FD194C1CD248CB0040BB90 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD194B1CD248CB0040BB90 /* ArticleTableViewCell.swift */; };
+		9E787C761CD2594400C23C55 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E787C741CD2594400C23C55 /* ArticleTableViewCell.swift */; };
+		9E787C771CD2594400C23C55 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E787C751CD2594400C23C55 /* ArticleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		3511F72C1CD0F6CC00B5D936 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		35FD19471CD247E80040BB90 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		35FD19491CD248B40040BB90 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
-		35FD194B1CD248CB0040BB90 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		9E787C741CD2594400C23C55 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		9E787C751CD2594400C23C55 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 				3511F7021CD0F47A00B5D936 /* Assets.xcassets */,
 				3511F7041CD0F47A00B5D936 /* LaunchScreen.storyboard */,
 				3511F7071CD0F47A00B5D936 /* Info.plist */,
+				9E787C741CD2594400C23C55 /* ArticleTableViewCell.swift */,
+				3511F72B1CD0F6CC00B5D936 /* CollectionViewCell.swift */,
 				35FD19491CD248B40040BB90 /* CategoryTableViewCell.swift */,
-				35FD194B1CD248CB0040BB90 /* ArticleTableViewCell.swift */,
 			);
 			path = CollectionViewTest;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 		35FD194D1CD24B200040BB90 /* NIB */ = {
 			isa = PBXGroup;
 			children = (
-				3511F72B1CD0F6CC00B5D936 /* CollectionViewCell.swift */,
+				9E787C751CD2594400C23C55 /* ArticleTableViewCell.xib */,
 				3511F72C1CD0F6CC00B5D936 /* CollectionViewCell.xib */,
 			);
 			name = NIB;
@@ -213,6 +216,7 @@
 				TargetAttributes = {
 					3511F6F71CD0F47A00B5D936 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9CV8MBD695;
 					};
 					3511F70B1CD0F47A00B5D936 = {
 						CreatedOnToolsVersion = 7.3;
@@ -249,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E787C771CD2594400C23C55 /* ArticleTableViewCell.xib in Resources */,
 				3511F7061CD0F47A00B5D936 /* LaunchScreen.storyboard in Resources */,
 				3511F7031CD0F47A00B5D936 /* Assets.xcassets in Resources */,
 				3511F72E1CD0F6CC00B5D936 /* CollectionViewCell.xib in Resources */,
@@ -277,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35FD194C1CD248CB0040BB90 /* ArticleTableViewCell.swift in Sources */,
+				9E787C761CD2594400C23C55 /* ArticleTableViewCell.swift in Sources */,
 				3511F72D1CD0F6CC00B5D936 /* CollectionViewCell.swift in Sources */,
 				35FD19481CD247E80040BB90 /* TableViewController.swift in Sources */,
 				3511F6FC1CD0F47A00B5D936 /* AppDelegate.swift in Sources */,
@@ -423,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CollectionViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -434,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CollectionViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -15,32 +15,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="91" id="ab6-Sd-HWs" customClass="ArticleTableViewCell" customModule="CollectionViewTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="91"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ab6-Sd-HWs" id="qEt-nd-S1m">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bux-uf-iR1">
-                                            <rect key="frame" x="22" y="34" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="hXm-GT-mgU"/>
-                                                <constraint firstAttribute="height" constant="21" id="pAp-zh-N1k"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="bux-uf-iR1" firstAttribute="top" secondItem="qEt-nd-S1m" secondAttribute="top" constant="34" id="1aQ-Lu-aAF"/>
-                                        <constraint firstItem="bux-uf-iR1" firstAttribute="leading" secondItem="qEt-nd-S1m" secondAttribute="leading" constant="22" id="oiz-f7-pOQ"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="109" id="JIY-xG-eQd" customClass="CategoryTableViewCell" customModule="CollectionViewTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="119" width="600" height="109"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="109" id="JIY-xG-eQd" customClass="CategoryTableViewCell" customModule="CollectionViewTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JIY-xG-eQd" id="UkM-Mq-geA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
@@ -56,7 +32,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCollectionCell" id="0uv-lU-JI7">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="0uv-lU-JI7">
                                                     <rect key="frame" x="0.0" y="29" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -83,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcg-YP-6AB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="143"/>
+            <point key="canvasLocation" x="146" y="145"/>
         </scene>
     </scenes>
 </document>

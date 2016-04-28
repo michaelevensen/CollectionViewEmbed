@@ -8,8 +8,8 @@
 
 import UIKit
 
-let articleReuseIdentifier = "articleCell"
-let categoryReuseIdentifier = "categoryCell"
+let articleReuseIdentifier = "ArticleTableViewCell"
+let categoryReuseIdentifier = "CategoryTableViewCell"
 
 class TableViewController: UITableViewController {
 
@@ -17,18 +17,19 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
     
         // register collectionview nib
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "CollectionViewCell")
+//        let nib = UINib(nibName: categoryReuseIdentifier, bundle: nil)
+//        tableView.registerNib(nib, forCellReuseIdentifier: categoryReuseIdentifier)
        
+        // register article nibs
+        let article = UINib(nibName: articleReuseIdentifier, bundle: nil)
+        tableView.registerNib(article, forCellReuseIdentifier: articleReuseIdentifier)
     }
-
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         guard let tableViewCell = cell as? CategoryTableViewCell else { return }
 
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -36,7 +37,7 @@ class TableViewController: UITableViewController {
 //        if indexPath.row==0 {
 //            return 350
 //        }
-//        
+        
         return 120 // cell height
     }
     
@@ -50,9 +51,10 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        // switch between two different types of cells
-//        let identifier = indexPath.row==0 ? articleReuseIdentifier : categoryReuseIdentifier
+
+        if indexPath.row==0 {
+            return tableView.dequeueReusableCellWithIdentifier(categoryReuseIdentifier, forIndexPath: indexPath) as! CategoryTableViewCell
+        }
         
         let cell = tableView.dequeueReusableCellWithIdentifier(articleReuseIdentifier, forIndexPath: indexPath) as! ArticleTableViewCell
         
@@ -65,12 +67,12 @@ class TableViewController: UITableViewController {
 extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
  
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 16
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CategoryCollectionViewCell", forIndexPath: indexPath)
         
         return cell
     }
