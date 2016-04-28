@@ -12,17 +12,15 @@ let articleReuseIdentifier = "ArticleTableViewCell"
 let categoryReuseIdentifier = "CategoryTableViewCell"
 
 class TableViewController: UITableViewController {
+    
+    // maximum number of featured articles
+    let featuredArticlesNum = 8
 
+    // category count
+    let categoryNum = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        // register collectionview nib
-//        let nib = UINib(nibName: categoryReuseIdentifier, bundle: nil)
-//        tableView.registerNib(nib, forCellReuseIdentifier: categoryReuseIdentifier)
-       
-        // register article nibs
-        let article = UINib(nibName: articleReuseIdentifier, bundle: nil)
-        tableView.registerNib(article, forCellReuseIdentifier: articleReuseIdentifier)
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -34,33 +32,37 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-//        if indexPath.row==0 {
-//            return 350
-//        }
+        // category cell height
+        if indexPath.section == 1 {
+           return 350
+        }
         
-        return 120 // cell height
+        // featured article cell height
+        return 120
     }
     
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if section==1 {
+            return categoryNum
+        }
+        
+        return featuredArticlesNum
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        if indexPath.row==0 {
+        // categories
+        if indexPath.section==1 {
             return tableView.dequeueReusableCellWithIdentifier(categoryReuseIdentifier, forIndexPath: indexPath) as! CategoryTableViewCell
         }
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(articleReuseIdentifier, forIndexPath: indexPath) as! ArticleTableViewCell
-        
-        return cell
-    }
 
+        return tableView.dequeueReusableCellWithIdentifier(articleReuseIdentifier, forIndexPath: indexPath) as! ArticleTableViewCell
+    }
 
 }
 
@@ -72,7 +74,9 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CategoryCollectionViewCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CategoryCollectionViewCell", forIndexPath: indexPath) as! CategoryCollectionViewCell
+        
+        cell.titleLabel.text = "This is a cell"
         
         return cell
     }

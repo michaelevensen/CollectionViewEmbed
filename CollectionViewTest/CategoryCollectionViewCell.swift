@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  CategoryCollectionViewCell.swift
 //  CollectionViewTest
 //
 //  Created by Michael Nino Evensen on 27/04/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var label: UILabel!
+class CategoryCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
