@@ -61,12 +61,16 @@ class TableViewController: UITableViewController {
             return tableView.dequeueReusableCellWithIdentifier(categoryReuseIdentifier, forIndexPath: indexPath) as! CategoryTableViewCell
         }
 
-        return tableView.dequeueReusableCellWithIdentifier(articleReuseIdentifier, forIndexPath: indexPath) as! ArticleTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(articleReuseIdentifier, forIndexPath: indexPath) as! ArticleTableViewCell
+        
+        cell.titleLabel.text = "Article Cell"
+        
+        return cell
     }
 
 }
 
-extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
  
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 16
@@ -76,8 +80,31 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CategoryCollectionViewCell", forIndexPath: indexPath) as! CategoryCollectionViewCell
         
-        cell.titleLabel.text = "This is a cell"
+        cell.titleLabel.text = "Category Article Cell"
         
         return cell
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsetsMake(50, -100, 0, 10)
+//    }
+    
+    // size
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 400, height: 200)
+    }
+
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        let categoryHeader = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "CategoryCollectionViewHeader", forIndexPath: indexPath) as! CategorySectionReusableView
+        
+        categoryHeader.categoryLabel.text = "Sport"
+        
+        
+        return categoryHeader
     }
 }

@@ -14,7 +14,10 @@ class CategoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        // Set custom layout
+        collectionView.setCollectionViewLayout(CollectionViewFlowLayout(), animated: true)
+//        collectionView.layer.hpr
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -31,4 +34,18 @@ class CategoryTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
 
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: 100, height: 100)
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsetsMake(50, -100, 0, 10)
+//    }
+//    
+//    // size
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        return CGSize(width: 400, height: 200)
+//    }
+
+    
 }

@@ -58,28 +58,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="331"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lem-QO-Gen">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lem-QO-Gen">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wXz-Nq-IIZ">
-                                                <size key="itemSize" width="248" height="289"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Xb-8a-8tq">
+                                                <size key="itemSize" width="248" height="269"/>
+                                                <size key="headerReferenceSize" width="50" height="50"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gDK-do-F3u" customClass="CategoryCollectionViewCell" customModule="CollectionViewTest" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="21" width="248" height="289"/>
+                                                    <rect key="frame" x="50" y="31" width="248" height="269"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="248" height="289"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="248" height="269"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-Al-wbt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="248" height="289"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-Al-wbt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="248" height="269"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drM-Bs-Gbf">
-                                                                <rect key="frame" x="14" y="218" width="220" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drM-Bs-Gbf">
+                                                                <rect key="frame" x="14" y="198" width="220" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -88,18 +88,49 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="CuA-Al-wbt" firstAttribute="leading" secondItem="gDK-do-F3u" secondAttribute="leading" id="AhK-ET-li3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="drM-Bs-Gbf" secondAttribute="bottom" constant="50" id="KNj-uV-ZMa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CuA-Al-wbt" secondAttribute="bottom" id="M4O-wf-Dz8"/>
+                                                        <constraint firstItem="drM-Bs-Gbf" firstAttribute="leading" secondItem="gDK-do-F3u" secondAttribute="leading" constant="14" id="Q6q-mI-ycT"/>
+                                                        <constraint firstItem="CuA-Al-wbt" firstAttribute="top" secondItem="gDK-do-F3u" secondAttribute="top" id="lMj-uE-QeQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CuA-Al-wbt" secondAttribute="trailing" id="nBE-NJ-HOM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="drM-Bs-Gbf" secondAttribute="trailing" constant="14" id="p50-Qt-0LY"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="248" height="269"/>
                                                     <connections>
                                                         <outlet property="titleLabel" destination="drM-Bs-Gbf" id="1KN-BR-AfB"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewHeader" id="4J0-zE-VSE" customClass="CategorySectionReusableView" customModule="CollectionViewTest" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="330"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;categoryLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SF-Gx-qSg">
+                                                        <rect key="frame" x="4" y="17" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.59827509590000005" green="0.79770642290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="leading" secondItem="4J0-zE-VSE" secondAttribute="leading" constant="4" id="G3Z-bH-fHi"/>
+                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="top" secondItem="4J0-zE-VSE" secondAttribute="top" constant="17" id="UOm-ft-EvD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5SF-Gx-qSg" secondAttribute="trailing" constant="4" id="ep9-Jn-FHz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="categoryLabel" destination="5SF-Gx-qSg" id="4dl-aP-PU5"/>
+                                                </connections>
+                                            </collectionReusableView>
                                         </collectionView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="lem-QO-Gen" firstAttribute="leading" secondItem="Qww-AK-qAq" secondAttribute="leading" id="PAp-2u-W6j"/>
                                         <constraint firstItem="lem-QO-Gen" firstAttribute="top" secondItem="Qww-AK-qAq" secondAttribute="top" id="c1r-VH-pNu"/>
-                                        <constraint firstAttribute="bottom" secondItem="lem-QO-Gen" secondAttribute="bottom" id="eyk-Ll-8iv"/>
+                                        <constraint firstAttribute="bottom" secondItem="lem-QO-Gen" secondAttribute="bottom" constant="1" id="eyk-Ll-8iv"/>
                                         <constraint firstAttribute="trailing" secondItem="lem-QO-Gen" secondAttribute="trailing" id="oPE-S7-M41"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -117,7 +148,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcg-YP-6AB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="145"/>
+            <point key="canvasLocation" x="95" y="127"/>
         </scene>
     </scenes>
 </document>
