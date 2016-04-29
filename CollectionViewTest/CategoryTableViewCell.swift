@@ -23,12 +23,6 @@ class CategoryTableViewCell: UITableViewCell {
         // This also works for pinning headers but they are affected by the UICollectionView as a whole with bounce etc.
 //        layout.sectionHeadersPinToVisibleBounds = true
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func setCollectionViewDataSourceDelegate <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>(dataSourceDelegate: D, forRow row: Int) {
         

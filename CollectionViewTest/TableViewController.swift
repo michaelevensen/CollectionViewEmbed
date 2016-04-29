@@ -91,9 +91,9 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let sideMargin:CGFloat = 25
-        print(collectionView.frame.width)
         
-        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
+        // needed to place sectionheader on top
+        return UIEdgeInsetsMake(0, -(collectionView.frame.width + sideMargin), 0, sideMargin)
     }
     
     // size
