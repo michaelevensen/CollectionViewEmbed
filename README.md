@@ -1,5 +1,5 @@
 # CollectionViewEmbed
-An example at embedding horizontally paging UICollectionViews into UITableViewCells. Works well in both Portrait and Landscape.
+An example at embedding UICollectionViews (Horizontally) into UITableViewCells. Works well in both Portrait and Landscape.
 
 Has sticky headers for each individual UICollectionView in cells (take a look at CustomSectionHeaderFlowLayout.swift for more on that).
 
