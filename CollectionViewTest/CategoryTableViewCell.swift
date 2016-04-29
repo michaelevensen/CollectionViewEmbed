@@ -15,15 +15,13 @@ class CategoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        // Set custom layout
-        collectionView.setCollectionViewLayout(CollectionViewFlowLayout(), animated: true)
-//        collectionView.layer.hpr
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        // pin headers
+        let layout = CustomSectionHeaderFlowLayout()
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        collectionView.collectionViewLayout = layout
+        
+        // This also works for pinning headers but they are affected by the UICollectionView as a whole with bounce etc.
+//        layout.sectionHeadersPinToVisibleBounds = true
     }
     
     func setCollectionViewDataSourceDelegate <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>(dataSourceDelegate: D, forRow row: Int) {

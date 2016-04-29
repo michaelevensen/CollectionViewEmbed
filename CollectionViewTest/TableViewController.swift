@@ -34,7 +34,7 @@ class TableViewController: UITableViewController {
         
         // category cell height
         if indexPath.section == 1 {
-           return 350
+           return 500
         }
         
         // featured article cell height
@@ -86,25 +86,26 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: collectionView.frame.width, height: 50)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(50, -100, 0, 10)
+        let sideMargin:CGFloat = 25
+        
+        // needed to place sectionheader on top
+        return UIEdgeInsetsMake(sideMargin, -collectionView.frame.width+sideMargin, 0, sideMargin)
     }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 400, height: 300)
+        return CGSize(width: 300, height: 400)
     }
 
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         
-        print("rerendering!")
-        
         let categoryHeader = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "CategoryCollectionViewHeader", forIndexPath: indexPath) as! CategorySectionReusableView
         
-        categoryHeader.categoryLabel.text = "Sport"
+        categoryHeader.categoryLabel.text = "Category Label"
         
         
         return categoryHeader

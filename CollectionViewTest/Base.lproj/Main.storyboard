@@ -9,7 +9,7 @@
         <scene sceneID="iRp-Z0-uxH">
             <objects>
                 <tableViewController id="3PN-vy-gLN" customClass="TableViewController" customModule="CollectionViewTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="331" sectionHeaderHeight="28" sectionFooterHeight="28" id="FmC-aN-11M">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="331" sectionHeaderHeight="28" sectionFooterHeight="28" id="FmC-aN-11M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,13 +63,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Xb-8a-8tq">
                                                 <size key="itemSize" width="248" height="269"/>
-                                                <size key="headerReferenceSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="186" height="50"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gDK-do-F3u" customClass="CategoryCollectionViewCell" customModule="CollectionViewTest" customModuleProvider="target">
-                                                    <rect key="frame" x="50" y="31" width="248" height="269"/>
+                                                    <rect key="frame" x="186" y="31" width="248" height="269"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="248" height="269"/>
@@ -104,21 +104,21 @@
                                                 </collectionViewCell>
                                             </cells>
                                             <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewHeader" id="4J0-zE-VSE" customClass="CategorySectionReusableView" customModule="CollectionViewTest" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="330"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="330"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;categoryLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SF-Gx-qSg">
-                                                        <rect key="frame" x="4" y="17" width="42" height="21"/>
+                                                        <rect key="frame" x="22" y="24" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.59827509590000005" green="0.79770642290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="leading" secondItem="4J0-zE-VSE" secondAttribute="leading" constant="4" id="G3Z-bH-fHi"/>
-                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="top" secondItem="4J0-zE-VSE" secondAttribute="top" constant="17" id="UOm-ft-EvD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="5SF-Gx-qSg" secondAttribute="trailing" constant="4" id="ep9-Jn-FHz"/>
+                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="leading" secondItem="4J0-zE-VSE" secondAttribute="leading" constant="22" id="G3Z-bH-fHi"/>
+                                                    <constraint firstItem="5SF-Gx-qSg" firstAttribute="top" secondItem="4J0-zE-VSE" secondAttribute="top" constant="24" id="UOm-ft-EvD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5SF-Gx-qSg" secondAttribute="trailing" constant="28" id="ep9-Jn-FHz"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="categoryLabel" destination="5SF-Gx-qSg" id="4dl-aP-PU5"/>
