@@ -89,12 +89,12 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: collectionView.frame.width, height: 50)
     }
 
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//        let sideMargin:CGFloat = 25
-//        print(collectionView.frame.width)
-//        
-//        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
-//    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let sideMargin:CGFloat = 25
+        print(collectionView.frame.width)
+        
+        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
+    }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

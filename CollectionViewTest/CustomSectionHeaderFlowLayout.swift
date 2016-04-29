@@ -9,18 +9,7 @@
 import UIKit
 
 class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
-
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        
-//        self.scrollDirection = UICollectionViewScrollDirection.Horizontal
-//        
-//        //        self.headerReferenceSize = CGSize(width: 50, height: 50)
-//        //        self.minimumInteritemSpacing = 0
-//        //        self.minimumLineSpacing = 0
-//        //        self.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
-//    }
-    
+   
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         var allAttributes = super.layoutAttributesForElementsInRect(rect)!
@@ -29,10 +18,12 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         var headerIsVisible = false
         
         // iterate
-        for obj in allAttributes {
+        for attributes in allAttributes {
             
-            if obj.representedElementKind == UICollectionElementKindSectionHeader {
-                obj.frame.origin.x = (self.collectionView?.contentOffset.x)!
+            if attributes.representedElementKind == UICollectionElementKindSectionHeader {
+                
+                // update header
+                self.updateHeaderAttributes(attributes)
                 
                 headerIsVisible = true
             }
@@ -55,8 +46,9 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, withIndexPath: indexPath)
         attributes.size = CGSize(width: (self.collectionView?.bounds.size.width)!, height: 50)
         
+        // set origin
         if elementKind == UICollectionElementKindSectionHeader {
-            attributes.frame.origin.x = (self.collectionView?.contentOffset.x)!
+            self.updateHeaderAttributes(attributes)
         }
         
         return attributes
@@ -66,12 +58,11 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         return true
     }
     
-//    func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes) {
-//        
-//        attributes.zIndex = 1
-//        attributes.hidden = false
-//        attributes.center = CGPoint(x: 0, y: 0)
-//        
-//    }
+    // MARK - Stick Header to Top Left
+    func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes) {
+        
+        // update frame
+        attributes.frame = CGRect(origin: CGPoint(x: (self.collectionView?.contentOffset.x)!, y: 0), size: attributes.size)
+    }
     
 }
