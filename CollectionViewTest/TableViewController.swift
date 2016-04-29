@@ -86,16 +86,19 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: collectionView.frame.width, height: 50)
     }
 
 //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(50, -100, 0, 10)
+//        let sideMargin:CGFloat = 25
+//        print(collectionView.frame.width)
+//        
+//        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
 //    }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 400, height: 200)
+        return CGSize(width: 300, height: 200)
     }
 
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {

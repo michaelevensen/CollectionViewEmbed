@@ -12,8 +12,4 @@ class CategorySectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var categoryLabel: UILabel!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
 }
