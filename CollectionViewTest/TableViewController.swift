@@ -84,17 +84,13 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         return cell
     }
-
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
-    }
-
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        let sideMargin:CGFloat = 25
-        
-        // needed to place sectionheader on top
-        return UIEdgeInsetsMake(sideMargin, -collectionView.frame.width+sideMargin, 0, sideMargin)
-    }
+    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//        let sideMargin:CGFloat = 25
+//        
+//        // needed to place sectionheader on top
+//        return UIEdgeInsetsMake(sideMargin, -collectionView.frame.width+sideMargin, 0, sideMargin)
+//    }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
