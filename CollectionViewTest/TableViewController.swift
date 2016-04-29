@@ -93,7 +93,7 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let sideMargin:CGFloat = 25
         
         // needed to place sectionheader on top
-        return UIEdgeInsetsMake(0, -(collectionView.frame.width + sideMargin), 0, sideMargin)
+        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
     }
     
     // size
@@ -105,7 +105,7 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         let categoryHeader = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "CategoryCollectionViewHeader", forIndexPath: indexPath) as! CategorySectionReusableView
         
-        categoryHeader.categoryLabel.text = "Sport"
+        categoryHeader.categoryLabel.text = "Category Label"
         
         
         return categoryHeader
