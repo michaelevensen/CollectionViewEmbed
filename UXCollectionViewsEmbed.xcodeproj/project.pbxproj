@@ -39,16 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3511F6F81CD0F47A00B5D936 /* CollectionViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3511F6F81CD0F47A00B5D936 /* UXCollectionViewsEmbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXCollectionViewsEmbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3511F6FB1CD0F47A00B5D936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3511F7001CD0F47A00B5D936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3511F7021CD0F47A00B5D936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3511F7051CD0F47A00B5D936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3511F7071CD0F47A00B5D936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3511F70C1CD0F47A00B5D936 /* CollectionViewTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3511F70C1CD0F47A00B5D936 /* UXCollectionViewsEmbed.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UXCollectionViewsEmbed.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3511F7101CD0F47A00B5D936 /* CollectionViewTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTestTests.swift; sourceTree = "<group>"; };
 		3511F7121CD0F47A00B5D936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3511F7171CD0F47B00B5D936 /* CollectionViewTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3511F7171CD0F47B00B5D936 /* UXCollectionViewsEmbed.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UXCollectionViewsEmbed.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3511F71B1CD0F47B00B5D936 /* CollectionViewTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTestUITests.swift; sourceTree = "<group>"; };
 		3511F71D1CD0F47B00B5D936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3511F72B1CD0F6CC00B5D936 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 		3511F6F91CD0F47A00B5D936 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3511F6F81CD0F47A00B5D936 /* CollectionViewTest.app */,
-				3511F70C1CD0F47A00B5D936 /* CollectionViewTestTests.xctest */,
-				3511F7171CD0F47B00B5D936 /* CollectionViewTestUITests.xctest */,
+				3511F6F81CD0F47A00B5D936 /* UXCollectionViewsEmbed.app */,
+				3511F70C1CD0F47A00B5D936 /* UXCollectionViewsEmbed.xctest */,
+				3511F7171CD0F47B00B5D936 /* UXCollectionViewsEmbed.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3511F6F71CD0F47A00B5D936 /* CollectionViewTest */ = {
+		3511F6F71CD0F47A00B5D936 /* UXCollectionViewsEmbed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3511F7201CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTest" */;
+			buildConfigurationList = 3511F7201CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbed" */;
 			buildPhases = (
 				3511F6F41CD0F47A00B5D936 /* Sources */,
 				3511F6F51CD0F47A00B5D936 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = CollectionViewTest;
+			name = UXCollectionViewsEmbed;
 			productName = CollectionViewTest;
-			productReference = 3511F6F81CD0F47A00B5D936 /* CollectionViewTest.app */;
+			productReference = 3511F6F81CD0F47A00B5D936 /* UXCollectionViewsEmbed.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3511F70B1CD0F47A00B5D936 /* CollectionViewTestTests */ = {
+		3511F70B1CD0F47A00B5D936 /* UXCollectionViewsEmbedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3511F7231CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTestTests" */;
+			buildConfigurationList = 3511F7231CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbedTests" */;
 			buildPhases = (
 				3511F7081CD0F47A00B5D936 /* Sources */,
 				3511F7091CD0F47A00B5D936 /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				3511F70E1CD0F47A00B5D936 /* PBXTargetDependency */,
 			);
-			name = CollectionViewTestTests;
+			name = UXCollectionViewsEmbedTests;
 			productName = CollectionViewTestTests;
-			productReference = 3511F70C1CD0F47A00B5D936 /* CollectionViewTestTests.xctest */;
+			productReference = 3511F70C1CD0F47A00B5D936 /* UXCollectionViewsEmbed.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3511F7161CD0F47B00B5D936 /* CollectionViewTestUITests */ = {
+		3511F7161CD0F47B00B5D936 /* UXCollectionViewsEmbedUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3511F7261CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTestUITests" */;
+			buildConfigurationList = 3511F7261CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbedUITests" */;
 			buildPhases = (
 				3511F7131CD0F47B00B5D936 /* Sources */,
 				3511F7141CD0F47B00B5D936 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				3511F7191CD0F47B00B5D936 /* PBXTargetDependency */,
 			);
-			name = CollectionViewTestUITests;
+			name = UXCollectionViewsEmbedUITests;
 			productName = CollectionViewTestUITests;
-			productReference = 3511F7171CD0F47B00B5D936 /* CollectionViewTestUITests.xctest */;
+			productReference = 3511F7171CD0F47B00B5D936 /* UXCollectionViewsEmbed.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3511F6F31CD0F47A00B5D936 /* Build configuration list for PBXProject "CollectionViewTest" */;
+			buildConfigurationList = 3511F6F31CD0F47A00B5D936 /* Build configuration list for PBXProject "UXCollectionViewsEmbed" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -233,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3511F6F71CD0F47A00B5D936 /* CollectionViewTest */,
-				3511F70B1CD0F47A00B5D936 /* CollectionViewTestTests */,
-				3511F7161CD0F47B00B5D936 /* CollectionViewTestUITests */,
+				3511F6F71CD0F47A00B5D936 /* UXCollectionViewsEmbed */,
+				3511F70B1CD0F47A00B5D936 /* UXCollectionViewsEmbedTests */,
+				3511F7161CD0F47B00B5D936 /* UXCollectionViewsEmbedUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,12 +303,12 @@
 /* Begin PBXTargetDependency section */
 		3511F70E1CD0F47A00B5D936 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3511F6F71CD0F47A00B5D936 /* CollectionViewTest */;
+			target = 3511F6F71CD0F47A00B5D936 /* UXCollectionViewsEmbed */;
 			targetProxy = 3511F70D1CD0F47A00B5D936 /* PBXContainerItemProxy */;
 		};
 		3511F7191CD0F47B00B5D936 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3511F6F71CD0F47A00B5D936 /* CollectionViewTest */;
+			target = 3511F6F71CD0F47A00B5D936 /* UXCollectionViewsEmbed */;
 			targetProxy = 3511F7181CD0F47B00B5D936 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,7 +425,7 @@
 				INFOPLIST_FILE = CollectionViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -439,7 +439,7 @@
 				INFOPLIST_FILE = CollectionViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -451,8 +451,8 @@
 				INFOPLIST_FILE = CollectionViewTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewTest.app/CollectionViewTest";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UXCollectionViewsEmbed.app/UXCollectionViewsEmbed";
 			};
 			name = Debug;
 		};
@@ -463,8 +463,8 @@
 				INFOPLIST_FILE = CollectionViewTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewTest.app/CollectionViewTest";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UXCollectionViewsEmbed.app/UXCollectionViewsEmbed";
 			};
 			name = Release;
 		};
@@ -474,7 +474,7 @@
 				INFOPLIST_FILE = CollectionViewTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
 				TEST_TARGET_NAME = CollectionViewTest;
 			};
 			name = Debug;
@@ -485,7 +485,7 @@
 				INFOPLIST_FILE = CollectionViewTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.michaelevensen.CollectionViewTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UXCollectionViewsEmbed;
 				TEST_TARGET_NAME = CollectionViewTest;
 			};
 			name = Release;
@@ -493,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3511F6F31CD0F47A00B5D936 /* Build configuration list for PBXProject "CollectionViewTest" */ = {
+		3511F6F31CD0F47A00B5D936 /* Build configuration list for PBXProject "UXCollectionViewsEmbed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3511F71E1CD0F47B00B5D936 /* Debug */,
@@ -502,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3511F7201CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTest" */ = {
+		3511F7201CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3511F7211CD0F47B00B5D936 /* Debug */,
@@ -511,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3511F7231CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTestTests" */ = {
+		3511F7231CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3511F7241CD0F47B00B5D936 /* Debug */,
@@ -520,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3511F7261CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "CollectionViewTestUITests" */ = {
+		3511F7261CD0F47B00B5D936 /* Build configuration list for PBXNativeTarget "UXCollectionViewsEmbedUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3511F7271CD0F47B00B5D936 /* Debug */,

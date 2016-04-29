@@ -30,21 +30,37 @@ class CollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
-        let allAttributesInRect = super.layoutAttributesForElementsInRect(rect)
+        var attributesArray = super.layoutAttributesForElementsInRect(rect)
         
         
-        for attributes in allAttributesInRect! as [UICollectionViewLayoutAttributes] {
+         print((self.collectionView?.contentOffset.x)!)
+        
+        // keep track of when header is visible
+        var headerVisible = false
+        
+        for attributes in attributesArray! as [UICollectionViewLayoutAttributes] {
+            
             if attributes.representedElementKind == UICollectionElementKindSectionHeader {
                 
-                print((self.collectionView?.contentOffset.x)!)
-                
+                headerVisible = true
                 
                 // adjust section header
-                attributes.frame = CGRect(x: (self.collectionView?.contentOffset.x)!, y: (self.collectionView?.frame.origin.y)!, width: (self.collectionView?.frame.width)!, height: 100)
+                
+                attributes.frame.origin = CGPoint(x: (self.collectionView?.contentOffset.x)!, y: (self.collectionView?.frame.origin.y)!)
+                attributes.zIndex = 2
+ 
+//                attributes.frame = CGRect(x: (self.collectionView?.contentOffset.x)!, y: (self.collectionView?.frame.origin.y)!, width: (self.collectionView?.frame.width)!-50, height: 50)
                 
             }
         }
         
-        return allAttributesInRect
+        if !headerVisible {
+            let attributes:UICollectionViewLayoutAttributes = self.layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: NSIndexPath(forItem: 0, inSection: 0))!
+            
+            attributesArray?.append(attributes)
+        
+        }
+        
+        return attributesArray
     }
 }

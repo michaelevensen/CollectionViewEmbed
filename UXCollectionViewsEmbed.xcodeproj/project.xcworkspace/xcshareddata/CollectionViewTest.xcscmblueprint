@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C0612583403C8612747491984E7FB23DCA27A181",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93A7E5DCE4F2FF6A368E32570464142655E6C266" : 0,
+    "C0612583403C8612747491984E7FB23DCA27A181" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "373A0EA3-584E-41EC-9B98-9F73C765D7D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93A7E5DCE4F2FF6A368E32570464142655E6C266" : "",
+    "C0612583403C8612747491984E7FB23DCA27A181" : "CollectionViewEmbed\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CollectionViewTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CollectionViewTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/michaelevensen\/SCPrototypes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93A7E5DCE4F2FF6A368E32570464142655E6C266"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/michaelevensen\/CollectionViewEmbed.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C0612583403C8612747491984E7FB23DCA27A181"
+    }
+  ]
+}

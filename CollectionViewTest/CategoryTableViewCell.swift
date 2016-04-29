@@ -41,7 +41,7 @@ class CategoryTableViewCell: UITableViewCell {
 //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsetsMake(50, -100, 0, 10)
 //    }
-//    
+//
 //    // size
 //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //        return CGSize(width: 400, height: 200)

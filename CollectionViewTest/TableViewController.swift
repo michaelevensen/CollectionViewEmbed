@@ -89,16 +89,18 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: 100, height: 100)
     }
 
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(50, -100, 0, 10)
-//    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(50, -100, 0, 10)
+    }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 400, height: 200)
+        return CGSize(width: 400, height: 300)
     }
 
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        print("rerendering!")
         
         let categoryHeader = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "CategoryCollectionViewHeader", forIndexPath: indexPath) as! CategorySectionReusableView
         
