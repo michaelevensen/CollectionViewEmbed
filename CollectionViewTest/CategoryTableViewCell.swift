@@ -18,6 +18,10 @@ class CategoryTableViewCell: UITableViewCell {
         // pin headers
         let layout = CustomSectionHeaderFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+//        layout.minimumInteritemSpacing = 50
+        layout.minimumLineSpacing = 20
+        
+        // set layout
         collectionView.collectionViewLayout = layout
         
         // This also works for pinning headers but they are affected by the UICollectionView as a whole with bounce etc.
@@ -31,19 +35,4 @@ class CategoryTableViewCell: UITableViewCell {
         collectionView.tag = row
         collectionView.reloadData()
     }
-
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: 100, height: 100)
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(50, -100, 0, 10)
-//    }
-//
-//    // size
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//        return CGSize(width: 400, height: 200)
-//    }
-
-    
 }

@@ -1,5 +1,5 @@
 //
-//  CategorySectionReusableView.swift
+//  CategorySectionHeaderView.swift
 //  CollectionViewTest
 //
 //  Created by Michael Nino Evensen on 28/04/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategorySectionReusableView: UICollectionReusableView {
+class CategorySectionHeaderView: UICollectionReusableView {
     
     @IBOutlet weak var categoryLabel: UILabel!
     

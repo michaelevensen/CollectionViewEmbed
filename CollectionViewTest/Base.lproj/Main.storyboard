@@ -8,14 +8,14 @@
         <!--Table View Controller-->
         <scene sceneID="iRp-Z0-uxH">
             <objects>
-                <tableViewController id="3PN-vy-gLN" customClass="TableViewController" customModule="CollectionViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3PN-vy-gLN" customClass="TableViewController" customModule="UXCollectionViewsEmbed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="331" sectionHeaderHeight="28" sectionFooterHeight="28" id="FmC-aN-11M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="170" id="JIY-xG-eQd" customClass="ArticleTableViewCell" customModule="CollectionViewTest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="170" id="JIY-xG-eQd" customClass="ArticleTableViewCell" customModule="UXCollectionViewsEmbed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JIY-xG-eQd" id="UkM-Mq-geA">
@@ -51,7 +51,7 @@
                                     <outlet property="titleLabel" destination="HNe-As-fLo" id="cd0-od-qTu"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="331" id="xca-6g-fg4" customClass="CategoryTableViewCell" customModule="CollectionViewTest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="331" id="xca-6g-fg4" customClass="CategoryTableViewCell" customModule="UXCollectionViewsEmbed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="198" width="600" height="331"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xca-6g-fg4" id="Qww-AK-qAq">
@@ -68,7 +68,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gDK-do-F3u" customClass="CategoryCollectionViewCell" customModule="CollectionViewTest" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gDK-do-F3u" customClass="CategoryCollectionViewCell" customModule="UXCollectionViewsEmbed" customModuleProvider="target">
                                                     <rect key="frame" x="186" y="31" width="248" height="269"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -103,7 +103,7 @@
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
-                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewHeader" id="4J0-zE-VSE" customClass="CategorySectionReusableView" customModule="CollectionViewTest" customModuleProvider="target">
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewHeader" id="4J0-zE-VSE" customClass="CategorySectionHeaderView" customModule="UXCollectionViewsEmbed" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="330"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
