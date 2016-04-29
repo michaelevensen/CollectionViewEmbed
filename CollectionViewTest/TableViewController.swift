@@ -34,7 +34,7 @@ class TableViewController: UITableViewController {
         
         // category cell height
         if indexPath.section == 1 {
-           return 350
+           return 500
         }
         
         // featured article cell height
@@ -93,12 +93,12 @@ extension TableViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let sideMargin:CGFloat = 25
         
         // needed to place sectionheader on top
-        return UIEdgeInsetsMake(0, -collectionView.frame.width+sideMargin, 0, sideMargin)
+        return UIEdgeInsetsMake(sideMargin, -collectionView.frame.width+sideMargin, 0, sideMargin)
     }
     
     // size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 300, height: 200)
+        return CGSize(width: 300, height: 400)
     }
 
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
