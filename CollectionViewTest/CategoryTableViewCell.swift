@@ -10,14 +10,14 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
 
         // pin headers
         let layout = CustomSectionHeaderFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
 //        layout.minimumInteritemSpacing = 50
         layout.minimumLineSpacing = 20
         
@@ -28,7 +28,8 @@ class CategoryTableViewCell: UITableViewCell {
 //        layout.sectionHeadersPinToVisibleBounds = true
     }
     
-    func setCollectionViewDataSourceDelegate <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>(dataSourceDelegate: D, forRow row: Int) {
+    func setCollectionViewDataSourceDelegate <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>
+        (dataSourceDelegate: D, forRow row: Int) {
         
         collectionView.delegate = dataSourceDelegate
         collectionView.dataSource = dataSourceDelegate

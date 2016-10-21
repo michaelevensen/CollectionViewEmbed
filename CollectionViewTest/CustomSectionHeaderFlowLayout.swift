@@ -10,9 +10,9 @@ import UIKit
 
 class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
    
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
-        var allAttributes = super.layoutAttributesForElementsInRect(rect)!
+        var allAttributes = super.layoutAttributesForElements(in: rect)!
         
         // re-add the header when disappearing
         var headerIsVisible = false
@@ -32,7 +32,7 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         // Flow layout will remove items from the list if they are supposed to be off screen, so we add them
         // back in in those cases.
         if !headerIsVisible {
-            let header = self.layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: NSIndexPath(forItem: allAttributes.count, inSection: 0))
+            let header = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: IndexPath(item: allAttributes.count, section: 0))
             
             allAttributes.append(header!)
         }
@@ -41,9 +41,9 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         
     }
     
-    override func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 
-        let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, withIndexPath: indexPath)
+        let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, with: indexPath)
         attributes.size = CGSize(width: (self.collectionView?.bounds.size.width)!, height: 50)
         
         // set origin
@@ -54,12 +54,12 @@ class CustomSectionHeaderFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
     // MARK - Stick Header to Top Left
-    func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes) {
+    func updateHeaderAttributes(_ attributes: UICollectionViewLayoutAttributes) {
         
         // update frame
         attributes.frame = CGRect(origin: CGPoint(x: (self.collectionView?.contentOffset.x)!, y: 0), size: attributes.size)
